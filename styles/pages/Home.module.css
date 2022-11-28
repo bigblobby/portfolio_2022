@@ -1,0 +1,161 @@
+.container {
+
+}
+
+.container-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.name {
+    margin-bottom: 0.5rem;
+}
+
+.job {
+    font-size: 1.25rem;
+    color: var(--color-electric-violet);
+    margin-bottom: 0.5rem;
+}
+
+.about {
+    text-align: center;
+    padding: 1rem;
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.social-icons {
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.social-icons a:hover i {
+    color: var(--color-electric-violet);
+}
+
+.social-icons i {
+    font-size: 2rem;
+    transition: color 0.15s ease-in-out;
+}
+
+.skills,
+.tools {
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.skills div,
+.tools div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills h4,
+.tools h4 {
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--color-electric-violet);
+    color: #fff;
+    margin: 0.5rem 0.25rem 0;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+}
+
+.arrow {
+    position: absolute;
+    top: calc(100vh - 100px);
+    left: calc(50% - 35px);
+    width: 70px;
+    height: 70px;
+    animation: jumpInfinite 2.5s infinite, appear 1.5s 5s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.arrow i {
+    font-size: 2rem;
+    transition: opacity 0.5s ease;
+}
+
+.projects-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.project h3, .project p {
+    margin-bottom: 1rem;
+}
+
+.project div {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.repo-site-link {
+    color: var(--color-sunset-orange);
+}
+
+@keyframes jumpInfinite {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container-inner {
+        height: 100vh;
+        margin: 0;
+    }
+}
